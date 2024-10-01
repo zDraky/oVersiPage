@@ -1,0 +1,20 @@
+{
+  "name": "OVersiPage",
+  "version": "1.0.0",
+  "description": "Landing page para o artista oVersi",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=8080",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "live-server": "^1.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "author": "Seu Nome",
+  "license": "ISC"
+}

@@ -37,3 +37,24 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentIndex);
     });
 });
+
+const links = [
+  {
+    id: "rodrigoZin",
+    url: "https://open.spotify.com/intl-pt/artist/71s3pi3yFhYB1P40dmRm1J?si=5yooU7RfTxWG8X-gTc1OeA",
+  },
+  {
+    id: "taka",
+    url: "https://open.spotify.com/intl-pt/artist/0ZCFSmJKfaYQi0gRSShdou?si=p9wkneIEROS-C9VhvzfFwg",
+  },
+  {
+    id: "letodie",
+    url: "https://open.spotify.com/intl-pt/artist/2JFpfD9p2vTjRCH8XLeO0l?si=KQDVxxHUTcO15_nhDvzYQA",
+  },
+];
+
+links.forEach((link) => {
+  document.getElementById(link.id).addEventListener("click", function () {
+    window.open(link.url, "_blank");
+  });
+});
