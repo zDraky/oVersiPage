@@ -86,20 +86,9 @@
                 Sintonize-se com essa nova voz do trap e prepare-se para viver o
                 que há de mais real na cena.
               </p>
+              
             </div>
-            <button
-              class="cta"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-              onclick="window.location.href='#contato';"
-            >
-              <span>Fale comigo</span>
-              <svg width="15px" height="10px" viewBox="0 0 13 10">
-                <path d="M1,5 L11,5"></path>
-                <polyline points="8 1 12 5 8 9"></polyline>
-              </svg>
-            </button>
+            
           </div>
           <div class="complemento-inicio">
             <img class="text" src="assets/img/IagoKen.jpeg" alt="" />
@@ -109,7 +98,10 @@
               alt="qr code para seu link bio"
             />
           </div>
+          <button class="buttonInit" onclick="scrollToContato()">Fale comigo</button>
+
         </div>
+        
       </main>
       <!--Fim Início-->
 
@@ -420,7 +412,7 @@
               <div class="imagens-case">
                 <div class="slide">
                   <i class="bi bi-chevron-left prev"></i>
-                  <img src="./assets/img/AKANI.jpeg" alt="" />
+                  <img src="./assets/img/AkaniX4.jpeg" alt="" />
                   <img src="./assets/img/AkaniX2.jpeg" alt="" />
                   <img src="./assets/img/AkaniX3.jpeg" alt="" />
                   <i class="bi bi-chevron-right next"></i>
@@ -510,6 +502,60 @@
         </div>
       </section>
       <!--Fim Portfolio-->
+      <section id="agradecimento" class="skills">
+        <div
+          class="container-skills"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="headline-skills">
+            <div
+              class="text-headline-skills"
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-aos-duration="1000"
+            >
+              <h2>Agradecimentos</h2>
+              <p>Obrigado a todos que fizeram parte dessa jornada! ❤️</p>
+              
+            </div>
+          </div>
+          <div class="conteudo-skills">
+            <div class="card card-iago">
+              <!-- Adicionando classe 'card-iago' -->
+              <p class="heading">Uytalu</p>
+              <p>Mito de+</p>
+              <p>Brabo</p>
+            </div>
+            <div class="card card-aki">
+              <!-- Adicionando classe 'card-aki' -->
+              <p class="heading">Pablo│Dev</p>
+              <p>Front End UX</p>
+              <p>Mito</p>
+            </div>
+            <div class="card card-taka">
+              <!-- Adicionando classe 'card-taka' -->
+              <p class="heading">Daiki</p>
+              <p>Mito de+</p>
+              <p>Brabo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="destaque">
+        <h1>Destaque Musical ⭐</h1>
+        <span>Especial de 5 artistas!</span>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/Anvzabyd9Gw?si=Wrds87ZUMpt8drly"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
 
       <!--Contato-->
       <section id="contato" class="contato">
@@ -600,9 +646,6 @@
                 >
               </li>
               <li>
-                <a href="#"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-              </li>
-              <li>
                 <a href="https://www.tiktok.com/@oversi01?_t=8q85DldFYF4&_r=1"
                   ><i class="bi bi-tiktok"></i> Tiktok</a
                 >
@@ -626,28 +669,19 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Inicialização do AOS -->
+    <script>
+      AOS.init();
+    </script>
+
     <!--JavaScript-->
     <script src="./assets/js/header.js"></script>
     <script src="assets/js/actionButton.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/slideSobre.js"></script>
     <script src="assets/js/slidePortfolio.js"></script>
-
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Inicialização do AOS -->
-    <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        once: true,
-        mirror: false,
-      });
-
-      window.addEventListener("scroll", function () {
-        AOS.refresh();
-      });
-    </script>
   </body>
 </html>

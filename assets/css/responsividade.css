@@ -4,6 +4,11 @@
     padding: 0;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   /************************** SOBRE ***/
   .sobre {
     height: auto;
@@ -38,6 +43,12 @@
     justify-content: center;
   }
 
+  .complemento-inicio {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
   .complemento-sobre {
     display: flex;
     align-items: center;
@@ -47,6 +58,18 @@
   .complemento-sobre img {
     position: unset;
     width: 100%;
+  }
+
+  .complemento-inicio .text {
+    margin-top: 80px;
+  }
+
+  .buttonInit {
+    margin-bottom: 140px;
+  }
+
+  .complemento-inicio .qr-code {
+    display: none;
   }
 
   /************************** SERVIÇOS ***/
@@ -201,37 +224,114 @@
     margin-top: 0;
   }
 
-@media (max-width: 768px) {
-  .logo img {
-    width: 5rem;
+  .complemento-inicio .text {
+    margin-top: 90px;
+    width: 100px;
   }
 
-  .paragrafo-inicio {
-    margin-bottom: 1.5rem; /* Espaçamento menor após o parágrafo */
+  .buttonInit {
+    margin-bottom: 200px;
   }
 
-  .cta {
-    margin-bottom: 2rem; /* Espaçamento menor após o botão */
+  @media (max-width: 768px) {
+    .logo img {
+      width: 3rem;
+    }
+
+    #inicio {
+      margin-bottom: 40px;
+    }
+
+    .header {
+      padding: 0.1rem 0.5rem;
+    }
+
+    .header img {
+      padding: 0.1rem 0.5rem;
+    }
+
+    .paragrafo-inicio {
+      margin-bottom: 1.5rem; /* Espaçamento menor após o parágrafo */
+    }
+
+    .cta {
+      margin-bottom: 2rem; /* Espaçamento menor após o botão */
+    }
+
+    .complemento-inicio {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 2rem; /* Espaçamento adicional entre o botão e as imagens */
+    }
+
+    .text,
+    .qr-code {
+      width: 80%;
+    }
+
+    .conteudo-skills {
+      flex-direction: column; /* Altera a direção dos cards para coluna */
+      align-items: center; /* Centraliza os cards horizontalmente */
+    }
+
+    .card {
+      width: 190px;
+      height: 254px; /* Define uma largura máxima para os cards */
+    }
+
+    .card::before {
+      width: 200px;
+      height: 264px;
+      left: -5px;
+    }
+
+    #whatsappButton {
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+      animation: pulse 2s infinite;
+      position: fixed;
+    }
+
+    #destaque h1 {
+      font-size: 2rem;
+    }
+
+    #destaque span {
+      font-size: 1.5rem;
+    }
+
+    .complemento-inicio .qr-code {
+      display: none;
+    }
   }
-
-  .complemento-inicio {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 2rem; /* Espaçamento adicional entre o botão e as imagens */
-  }
-
-  .text, .qr-code {
-    width: 80%;
-  }
-}
-
-
 
   /* Para dispositivos muito pequenos */
   @media (max-width: 480px) {
     .logo img {
       width: 4rem; /* Reduz ainda mais para dispositivos pequenos */
     }
+  }
+
+  .complemento-inicio .qr-code {
+    display: none;
+  }
+  .buttonInit {
+    width: 150px;
+    height: 50px;
+  }
+
+  .buttonInit::before,
+  .buttonInit::after {
+    width: 100%; /* Garante que o gradiente ocupe toda a largura */
+    height: 100%; /* Garante que o gradiente ocupe toda a altura */
+    z-index: -1; /* Mantém o gradiente atrás do conteúdo */
+  }
+
+  .buttonInit::after {
+    filter: blur(15px); /* Reduz o desfoque para telas menores */
+    transform: scale(1.4); /* Ajuste do tamanho do gradiente */
   }
 }
